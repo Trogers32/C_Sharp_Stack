@@ -1,0 +1,11 @@
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\CollectionsPractice\obj\Debug\netcoreapp2.2\CollectionsPractice.csprojAssemblyReference.cache
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\CollectionsPractice\obj\Debug\netcoreapp2.2\CollectionsPractice.csproj.CoreCompileInputs.cache
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\CollectionsPractice\obj\Debug\netcoreapp2.2\CollectionsPractice.AssemblyInfoInputs.cache
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\CollectionsPractice\obj\Debug\netcoreapp2.2\CollectionsPractice.AssemblyInfo.cs
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\CollectionsPractice\bin\Debug\netcoreapp2.2\CollectionsPractice.deps.json
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\CollectionsPractice\bin\Debug\netcoreapp2.2\CollectionsPractice.runtimeconfig.json
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\CollectionsPractice\bin\Debug\netcoreapp2.2\CollectionsPractice.runtimeconfig.dev.json
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\CollectionsPractice\bin\Debug\netcoreapp2.2\CollectionsPractice.dll
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\CollectionsPractice\bin\Debug\netcoreapp2.2\CollectionsPractice.pdb
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\CollectionsPractice\obj\Debug\netcoreapp2.2\CollectionsPractice.dll
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\CollectionsPractice\obj\Debug\netcoreapp2.2\CollectionsPractice.pdb
