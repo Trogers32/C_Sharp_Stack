@@ -1,0 +1,11 @@
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\Language Essentials\MultipTable\obj\Debug\netcoreapp2.2\MultipTable.csprojAssemblyReference.cache
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\Language Essentials\MultipTable\obj\Debug\netcoreapp2.2\MultipTable.csproj.CoreCompileInputs.cache
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\Language Essentials\MultipTable\obj\Debug\netcoreapp2.2\MultipTable.AssemblyInfoInputs.cache
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\Language Essentials\MultipTable\obj\Debug\netcoreapp2.2\MultipTable.AssemblyInfo.cs
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\Language Essentials\MultipTable\bin\Debug\netcoreapp2.2\MultipTable.deps.json
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\Language Essentials\MultipTable\bin\Debug\netcoreapp2.2\MultipTable.runtimeconfig.json
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\Language Essentials\MultipTable\bin\Debug\netcoreapp2.2\MultipTable.runtimeconfig.dev.json
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\Language Essentials\MultipTable\bin\Debug\netcoreapp2.2\MultipTable.dll
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\Language Essentials\MultipTable\bin\Debug\netcoreapp2.2\MultipTable.pdb
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\Language Essentials\MultipTable\obj\Debug\netcoreapp2.2\MultipTable.dll
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\Language Essentials\MultipTable\obj\Debug\netcoreapp2.2\MultipTable.pdb
