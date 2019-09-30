@@ -1,0 +1,11 @@
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\Language Essentials\UnBox\obj\Debug\netcoreapp2.2\UnBox.csprojAssemblyReference.cache
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\Language Essentials\UnBox\obj\Debug\netcoreapp2.2\UnBox.csproj.CoreCompileInputs.cache
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\Language Essentials\UnBox\obj\Debug\netcoreapp2.2\UnBox.AssemblyInfoInputs.cache
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\Language Essentials\UnBox\obj\Debug\netcoreapp2.2\UnBox.AssemblyInfo.cs
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\Language Essentials\UnBox\bin\Debug\netcoreapp2.2\UnBox.deps.json
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\Language Essentials\UnBox\bin\Debug\netcoreapp2.2\UnBox.runtimeconfig.json
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\Language Essentials\UnBox\bin\Debug\netcoreapp2.2\UnBox.runtimeconfig.dev.json
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\Language Essentials\UnBox\bin\Debug\netcoreapp2.2\UnBox.dll
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\Language Essentials\UnBox\bin\Debug\netcoreapp2.2\UnBox.pdb
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\Language Essentials\UnBox\obj\Debug\netcoreapp2.2\UnBox.dll
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\Language Essentials\UnBox\obj\Debug\netcoreapp2.2\UnBox.pdb
