@@ -1,0 +1,11 @@
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\OOP\HungryNinja\obj\Debug\netcoreapp2.2\HungryNinja.csprojAssemblyReference.cache
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\OOP\HungryNinja\obj\Debug\netcoreapp2.2\HungryNinja.csproj.CoreCompileInputs.cache
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\OOP\HungryNinja\obj\Debug\netcoreapp2.2\HungryNinja.AssemblyInfoInputs.cache
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\OOP\HungryNinja\obj\Debug\netcoreapp2.2\HungryNinja.AssemblyInfo.cs
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\OOP\HungryNinja\bin\Debug\netcoreapp2.2\HungryNinja.deps.json
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\OOP\HungryNinja\bin\Debug\netcoreapp2.2\HungryNinja.runtimeconfig.json
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\OOP\HungryNinja\bin\Debug\netcoreapp2.2\HungryNinja.runtimeconfig.dev.json
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\OOP\HungryNinja\bin\Debug\netcoreapp2.2\HungryNinja.dll
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\OOP\HungryNinja\bin\Debug\netcoreapp2.2\HungryNinja.pdb
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\OOP\HungryNinja\obj\Debug\netcoreapp2.2\HungryNinja.dll
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\OOP\HungryNinja\obj\Debug\netcoreapp2.2\HungryNinja.pdb
