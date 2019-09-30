@@ -1,1 +1,12 @@
 dotnet new console -o {{Project name}}
+dotnet build
+dotnet run
+dotnet /path/to/YourProject.dll
+
+dotnet restore
+
+ProjName.csproj: the file that references every dependency for our project. 
+Any time we make add or remove packages, we must run the dotnet restore command, 
+which initiates a script that reads the .csproj file and triggers NuGet to download 
+the appropriate packages. 
+(Upon initial creation of a project, this script is automatically run.)
