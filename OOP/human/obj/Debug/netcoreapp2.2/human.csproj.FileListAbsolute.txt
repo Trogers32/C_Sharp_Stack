@@ -1,0 +1,11 @@
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\OOP\human\obj\Debug\netcoreapp2.2\human.csprojAssemblyReference.cache
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\OOP\human\obj\Debug\netcoreapp2.2\human.csproj.CoreCompileInputs.cache
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\OOP\human\obj\Debug\netcoreapp2.2\human.AssemblyInfoInputs.cache
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\OOP\human\obj\Debug\netcoreapp2.2\human.AssemblyInfo.cs
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\OOP\human\bin\Debug\netcoreapp2.2\human.deps.json
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\OOP\human\bin\Debug\netcoreapp2.2\human.runtimeconfig.json
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\OOP\human\bin\Debug\netcoreapp2.2\human.runtimeconfig.dev.json
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\OOP\human\bin\Debug\netcoreapp2.2\human.dll
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\OOP\human\bin\Debug\netcoreapp2.2\human.pdb
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\OOP\human\obj\Debug\netcoreapp2.2\human.dll
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\OOP\human\obj\Debug\netcoreapp2.2\human.pdb
