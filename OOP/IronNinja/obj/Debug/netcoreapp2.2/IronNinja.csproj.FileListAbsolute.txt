@@ -1,0 +1,11 @@
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\OOP\IronNinja\obj\Debug\netcoreapp2.2\IronNinja.csprojAssemblyReference.cache
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\OOP\IronNinja\obj\Debug\netcoreapp2.2\IronNinja.csproj.CoreCompileInputs.cache
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\OOP\IronNinja\obj\Debug\netcoreapp2.2\IronNinja.AssemblyInfoInputs.cache
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\OOP\IronNinja\obj\Debug\netcoreapp2.2\IronNinja.AssemblyInfo.cs
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\OOP\IronNinja\bin\Debug\netcoreapp2.2\IronNinja.deps.json
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\OOP\IronNinja\bin\Debug\netcoreapp2.2\IronNinja.runtimeconfig.json
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\OOP\IronNinja\bin\Debug\netcoreapp2.2\IronNinja.runtimeconfig.dev.json
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\OOP\IronNinja\bin\Debug\netcoreapp2.2\IronNinja.dll
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\OOP\IronNinja\bin\Debug\netcoreapp2.2\IronNinja.pdb
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\OOP\IronNinja\obj\Debug\netcoreapp2.2\IronNinja.dll
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\OOP\IronNinja\obj\Debug\netcoreapp2.2\IronNinja.pdb

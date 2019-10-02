@@ -13,9 +13,16 @@ namespace WizardNinjaSamurai
             // w1.Attack(w2);
             s1.Attack(w1);
             n1.Attack(s1);
+            n1.Attack(s1);
+            n1.Attack(s1);
+            n1.Attack(s1);
+            n1.Attack(s1);
+            n1.Attack(s1);
+            n1.Attack(s1);
+            n1.Attack(s1);
         }
     }
-    class Human
+    abstract class Human
     {
         public string Name;
         public int Strength;
