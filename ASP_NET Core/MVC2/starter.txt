@@ -1,0 +1,17 @@
+MVC Project Start
+dotnet new mvc --no-https -o projectName
+
+Remove the following lines from your Startup.cs file
+services.Configure<CookiePolicyOptions>(options =>
+{
+	// This lambda determines whether user consent for non-essential cookies is needed for a given request.
+	options.CheckConsentNeeded = context => true;
+	options.MinimumSameSitePolicy = SameSiteMode.None;
+});
+app.UseHttpsRedirection();
+app.UseCookiePolicy();
+
+Remove the following line from your _Layout.cs file
+<partial name="_CookieConsentPartial"></partial>   
+
+dotnet watch run
