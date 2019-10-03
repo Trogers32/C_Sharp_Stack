@@ -1,0 +1,14 @@
+dotnet new web --no-https -o ProjectName
+dotnet build
+dotnet watch run
+
+>>>>>>IN STARTUP.CS<<<<<<<<<
+public void ConfigureServices(IServiceCollection services)
+    {
+        services.AddMvc();  //add this line
+    }
+public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+    {
+        // some code removed for brevity
+        app.UseMvc();   //add this line, replacing the app.run lines of code
+    }
