@@ -22,3 +22,4 @@ C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\ASP_NET Core\Portfolio\obj\Debug\netco
 C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\ASP_NET Core\Portfolio\obj\Debug\netcoreapp2.2\Razor\Views\Home\Projects.g.cshtml.cs
 C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\ASP_NET Core\Portfolio\obj\Debug\netcoreapp2.2\Portfolio.RazorTargetAssemblyInfo.cs
 C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\ASP_NET Core\Portfolio\obj\Debug\netcoreapp2.2\Portfolio.Views.pdb
+C:\Users\Mits\Desktop\Coding_Dojo\Work\C#\ASP_NET Core\Portfolio\obj\Debug\netcoreapp2.2\Razor\Views\Home\Contact.g.cshtml.cs

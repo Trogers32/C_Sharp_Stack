@@ -1,4 +1,6 @@
+using System;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 namespace Portfolio.Controllers     //be sure to use your own project's namespace!
 {
     public class HomeController : Controller
@@ -6,7 +8,11 @@ namespace Portfolio.Controllers     //be sure to use your own project's namespac
         [HttpGet("")]
         public ViewResult Index()
         {
-            ViewBag.Example = "Hello World!";
+            List<String> li = new List<string>();
+            li.Add("apple");
+            li.Add("cherry");
+            li.Add("REEEEEE");
+            ViewBag.Example = li;
             return View();
         }
         [HttpGet("any")]

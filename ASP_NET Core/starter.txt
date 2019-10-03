@@ -1,6 +1,20 @@
+
+using System.Collections.Generic;
+
 dotnet new web --no-https -o ProjectName
 dotnet build
 dotnet watch run
+
+Create a folder called Controllers
+	create controller files following NameController format
+Create a folder called Views
+	Create a folder following controller "Name"
+		Create a cshtml file
+Create a wwwroot folder to act as the static folder
+	create a css folder within
+		create style.css
+
+
 
 >>>>>>IN STARTUP.CS<<<<<<<<<
 public void ConfigureServices(IServiceCollection services)
@@ -9,6 +23,6 @@ public void ConfigureServices(IServiceCollection services)
     }
 public void Configure(IApplicationBuilder app, IHostingEnvironment env)
     {
-        // some code removed for brevity
-        app.UseMvc();   //add this line, replacing the app.run lines of code
+    	app.UseStaticFiles(); ////for static folder use
+    	app.UseMvc();
     }

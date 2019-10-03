@@ -27,5 +27,12 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus placeat voluptatibus enim perspiciatis temporibus ipsam accusamus, velit, neque illo reprehenderit minima suscipit sequi consequuntur non id tempore labore, aspernatur pariatur!</p>
             </div>
         </div>
+        @{
+            String[] hey = new String[3]{"Maybe","Yup","HUH?"};
+            for(int i = 0; i < ViewBag.Example.Count; i++){
+                <p>@ViewBag.Example[i]</p>
+                <p>@hey[i]</p>
+            }
+        }
     </body>
 </html>
