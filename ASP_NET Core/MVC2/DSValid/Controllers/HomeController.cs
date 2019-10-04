@@ -11,7 +11,7 @@ namespace DSValid.Controllers
     public class HomeController : Controller
     {
         public IActionResult Index()
-        {
+        { 
             return View();
         }
  
@@ -27,12 +27,13 @@ namespace DSValid.Controllers
         }
         
         [HttpPost("user/create")]
-        public IActionResult Create(User user)
+        public IActionResult Create(IndexViewModel user)
         {
             if(ModelState.IsValid)
             {
+                User newUs = user.newUser;
                 // do somethng!  maybe insert into db?  then we will redirect
-                return RedirectToAction("Result", user);
+                return RedirectToAction("Result", newUs);
             }
             else
             {

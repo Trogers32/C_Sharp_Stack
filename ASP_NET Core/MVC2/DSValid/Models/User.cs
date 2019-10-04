@@ -22,8 +22,11 @@ namespace DSValid.Models
         [Required(ErrorMessage = "Favorite Language is required")]
         public string Language {get;set;}
 ///////////////////////////////////////////////////////////////////////
-        [Range(0,20, ErrorMessage = "Comment must be less than 20")]
+        [MaxLength(20, ErrorMessage = "Comment must be less than 20")]
         public string Comment {get;set;}
 ///////////////////////////////////////////////////////////////////////
+    }
+    public class IndexViewModel{
+        public User newUser {get;set;}
     }
 }
