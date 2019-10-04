@@ -12,23 +12,21 @@ namespace ViewModelFun.Controllers
     {
         public IActionResult Index()
         {
-            User someUser = new User()
-            {
-                FirstName = "Sally",
-                LastName = "Sanderson"
-            };
-            return View(someUser);
-        }
-        [HttpGet("numbers")]
-        public IActionResult Numbers()
-        {
-            List<int> someUser = new List<int>();
-            someUser.Add(1);
-            someUser.Add(2);
-            someUser.Add(3);
-            someUser.Add(4);
-            ViewBag.nums = someUser;
             return View();
+        }
+        [HttpPost("user/create")]
+        public IActionResult Create(User user)
+        {
+            if(ModelState.IsValid)
+            {
+                // do somethng!  maybe insert into db?  then we will redirect
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                // Oh no!  We need to return a ViewResponse to preserve the ModelState, and the errors it now contains!
+                return View("Index");
+            }
         }
         public IActionResult Privacy()
         {

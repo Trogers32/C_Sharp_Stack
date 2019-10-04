@@ -15,3 +15,8 @@ Remove the following line from your _Layout.cs file
 <partial name="_CookieConsentPartial"></partial>   
 
 dotnet watch run
+
+
+
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations; ////allows model validation

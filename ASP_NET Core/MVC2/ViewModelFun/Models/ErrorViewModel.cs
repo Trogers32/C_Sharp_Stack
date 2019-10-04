@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System;
 using System.Collections;
+using System.ComponentModel.DataAnnotations;
 
 namespace ViewModelFun.Models
 {
@@ -12,8 +13,17 @@ namespace ViewModelFun.Models
     }
     public class User
     {
-        public string FirstName {get;set;}
-        public string LastName {get;set;}
+        [Required(ErrorMessage = "Username is required")]
+        [MinLength(3, ErrorMessage = "Email must be 3 or more")]
+        public string Username {get;set;}
+ 
+        [Required(ErrorMessage = "Email is required")]
+        [EmailAddress]
+        public string Email { get; set; }
+ 
+        [Required(ErrorMessage = "Password is required")]
+        [DataType(DataType.Password)]
+        public string Password { get; set; }
     }
     public class Intro{
         public string desc {get;set;}
