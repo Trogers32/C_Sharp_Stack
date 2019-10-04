@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+    @model User
+    <form asp-action="Create" asp-controller="Home" method="post" class="mx-auto w-50">
+            <span asp-validation-for="Username"></span>
+        <div class="row">
+            <label asp-for="Username"></label>
+            <input asp-for="Username">
+        </div>
+            <span asp-validation-for="Location"></span>
+        <div class="row">
+            <label asp-for="Location"></label>
+            <input asp-for="Location">
+        </div>
+            <span asp-validation-for="Language"></span>
+        <div class="row">
+            <label asp-for="Language"></label>
+            <input asp-for="Language">
+        </div>
+            <span asp-validation-for="Comment"></span>
+        <div class="row">
+            <label asp-for="Comment"></label>
+            @Html.TextArea("Comment", new { @class = "form-control", style="width:50%;" })  
+        </div>
+        <input value="Add User" type="submit">    
+    </form>
