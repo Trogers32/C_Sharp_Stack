@@ -1,5 +1,6 @@
 using System;
 using System.ComponentModel.DataAnnotations; 
+using System.Collections.Generic;
 
 namespace LoginReg.Models
 {
@@ -29,5 +30,8 @@ namespace LoginReg.Models
         [DataType(DataType.Password)]
         public string Password { get; set; }
 ///////////////////////////////////////////////////////////////////////
+    }
+    public class IndexViewModel{
+        public User newUser {get;set;}
     }
 }
