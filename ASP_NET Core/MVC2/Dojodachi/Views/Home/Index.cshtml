@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Dojodachi";
+}
+
+<div class="w-75 text-center mx-auto">
+    <div class="row">
+        <div class="col">Fullness: @ViewBag.Fullness</div>
+        <div class="col">Happiness: @ViewBag.Happiness</div>
+        <div class="col">Meals: @ViewBag.Meals</div>
+        <div class="col">Energy: @ViewBag.Energy</div>
+    </div>
+    <div class="row border border-dark" style="height:50vh;">
+        <img src="" alt="Dachi here" class="d-block" style="height:200px;">
+        <p>@ViewBag.Actions</p>
+    </div>
+    <div class="row">
+        <button class="d-inline-block col"><a href="Feed">Feed</a></button>
+        <button class="d-inline-block col"><a href="Play">Play</a></button>
+        <button class="d-inline-block col"><a href="Work">Work</a></button>
+        <button class="d-inline-block col"><a href="Sleep">Sleep</a></button>
+    </div>
+</div>
