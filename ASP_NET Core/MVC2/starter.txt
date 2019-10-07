@@ -1,5 +1,7 @@
 MVC Project Start
 dotnet new mvc --no-https -o projectName
+#In terminal after navigating to your project directory, run the following command
+dotnet add package MySql.Data -v 8.0.16 ////adds ability to use sql db
 
 Remove the following lines from your Startup.cs file
 services.Configure<CookiePolicyOptions>(options =>
