@@ -1,9 +1,14 @@
 MVC Project Start
+----------------------------------------------------------------------------
 dotnet new mvc --no-https -o projectName
 #In terminal after navigating to your project directory, run the following command
-dotnet add package MySql.Data -v 8.0.16 ////adds ability to use sql db
+dotnet add package Pomelo.EntityFrameworkCore.MySql -v 2.2.0    /////adds entity
 
+dotnet add package MySql.Data -v 8.0.16 ////adds ability to use sql db		DONT USE?
+
+----------------------------------------------------------------------------
 Remove the following lines from your Startup.cs file
+----------------------------------------------------------------------------
 services.Configure<CookiePolicyOptions>(options =>
 {
 	// This lambda determines whether user consent for non-essential cookies is needed for a given request.
@@ -13,14 +18,21 @@ services.Configure<CookiePolicyOptions>(options =>
 app.UseHttpsRedirection();
 app.UseCookiePolicy();
 
+----------------------------------------------------------------------------
 --------Remove the following line from your _Layout.cs file---------
+----------------------------------------------------------------------------
 <partial name="_CookieConsentPartial"></partial>   
 
+----------------------------------------------------------------------------
 ---------	ADD this to startup.cs in the configure method	-------------
+----------------------------------------------------------------------------
+using Microsoft.EntityFrameworkCore; //////////entity import
 public void ConfigureServices(IServiceCollection services)
 {
     services.AddSession();    // add this line
     services.AddMvc();
+    string mySqlConnection = "server=localhost;userid=root;password=root;port=3306;database=mydb;SslMode=None";
+    services.AddDbContext<MyContext>(options => options.UseMySql(mySqlConnection));
 }
 // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
 public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -30,7 +42,9 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
     app.UseMvc();        // make sure UseMvc comes last!!
 }
 
+----------------------------------------------------------------------------
 ----------	ADD to controller	-------------------
+----------------------------------------------------------------------------
 using Microsoft.AspNetCore.Http; ///////////////////////added for session
 
 
@@ -39,6 +53,25 @@ dotnet watch run
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations; ////allows model validation
 
+----------------------------------------------------------------------------
+----------------Create a file called YourContext.cs ----------------------
+----------------------------------------------------------------------------
+using Microsoft.EntityFrameworkCore; //////////entity import
+namespace YourNamespace.Models
+{
+    public class MyContext : DbContext
+    {
+        // base() calls the parent class' constructor passing the "options" parameter along
+        public MyContext(DbContextOptions options) : base(options) { }
+    }
+}
+
+
+
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
 --------------session uses---------------
 // *Inside controller methods*
 // To store a string in session we use ".SetString"
@@ -58,7 +91,9 @@ ViewBag.Count = HttpContext.Session.GetInt32("count");
 <!-- in your View -->
 <h2>You have clicked the button @ViewBag.Count</h2>
 
+----------------------------------------------------------------------------
 -----------------modifying session to use objects--------------------
+----------------------------------------------------------------------------
 using Newtonsoft.Json;
 // Somewhere in your namespace, outside other classes
 public static class SessionExtensions

@@ -8,8 +8,10 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore; //////////entity import
+using CRUDelicious.Models;
 
-namespace QuotingDojo
+namespace CRUDelicious
 {
     public class Startup
     {
@@ -23,6 +25,7 @@ namespace QuotingDojo
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<MyContext>(options => options.UseMySql(Configuration["DBInfo:ConnectionString"]));
             services.AddSession();    // add this line
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
@@ -41,7 +44,6 @@ namespace QuotingDojo
 
             app.UseStaticFiles();
             app.UseSession();    // add this line
-
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

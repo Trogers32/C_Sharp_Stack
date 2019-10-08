@@ -5,6 +5,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using QuotingDojo.Models;
+using Microsoft.AspNetCore.Http; ///////////////////////added for session
+using DbConnection; ////////added for sql db use -- see dbconnection.cs
 
 namespace QuotingDojo.Controllers
 {
