@@ -1,8 +1,37 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
-}
-
+} 
+ 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+@{
+    foreach(var us in ViewBag.users){
+        <p>@us.FirstName</p>
+    }
+}
+@model User
+<form asp-action="CreateUser" asp-controller="Home" method="post" class="mx-auto w-50">
+        <span asp-validation-for="FirstName"></span>
+    <div class="row">
+        <label asp-for="FirstName"></label>
+        <input asp-for="FirstName">
+    </div>
+        <span asp-validation-for="LastName"></span>
+    <div class="row">
+        <label asp-for="LastName"></label>
+        <input asp-for="LastName">
+    </div>
+        <span asp-validation-for="Email"></span>
+    <div class="row">
+        <label asp-for="Email"></label>
+        <input asp-for="Email">
+    </div>
+        <span asp-validation-for="Password"></span>
+    <div class="row">
+        <label asp-for="Password"></label>
+        <input asp-for="Password">
+    </div>
+    <input value="Add User" type="submit">    
+</form>

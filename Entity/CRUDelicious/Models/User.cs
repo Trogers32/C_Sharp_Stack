@@ -4,17 +4,32 @@ namespace CRUDelicious.Models
 {
     public class User
     {
-        // auto-implemented properties need to match the columns in your table
-        // the [Key] attribute is used to mark the Model property being used for your table's Primary Key
+///////////////////////////////////////////////////////////////////////
         [Key]
         public int UserId { get; set; }
-        // MySQL VARCHAR and TEXT types can be represeted by a string
+///////////////////////////////////////////////////////////////////////
+        [Required(ErrorMessage = "First name is required.")]
+        [MinLength(2, ErrorMessage = "First name must be at least 2 characters long.")]
         public string FirstName { get; set; }
+///////////////////////////////////////////////////////////////////////
+        [Required(ErrorMessage = "Last name is required.")]
+        [MinLength(2, ErrorMessage = "Last name must be at least 2 characters long.")]
         public string LastName { get; set; }
+///////////////////////////////////////////////////////////////////////
+        [Required(ErrorMessage = "An email is required.")]
+        [EmailAddress(ErrorMessage = "Please provide a valid email address.")]
         public string Email { get; set; }
+///////////////////////////////////////////////////////////////////////
+        [MinLength(8, ErrorMessage = "Password must be at least 8 characters long.")]
+        [Required(ErrorMessage = "A password is required."), DataType(DataType.Password)]
         public string Password { get; set; }
-        // The MySQL DATETIME type can be represented by a DateTime
-        public DateTime CreatedAt {get;set;}
-        public DateTime UpdatedAt {get;set;}
+///////////////////////////////////////////////////////////////////////
+    
+        // We can provide some hardcoded default values like so:
+        public DateTime CreatedAt {get;set;} = DateTime.Now;
+        public DateTime UpdatedAt {get;set;} = DateTime.Now;
+        // New User objects will these values assigned
+    	// However, when we query existing data, CreatedAt/UpdatedAt will refer to 
+    	// values that are stored in the DB
     }
-}
+} 

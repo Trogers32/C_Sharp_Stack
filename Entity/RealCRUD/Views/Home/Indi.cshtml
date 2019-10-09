@@ -1,0 +1,17 @@
+@model Good
+<div class="row">
+    <a href="/">Home</a>
+</div>
+
+<div class="w-50 mx-auto border-bottom border-dark text-center">
+    <h1>@Model.Name</h1>
+    <h4>@Model.Chef</h4><br>
+</div>
+<div class="w-50 mx-auto">
+    <p>@Model.Description</p>
+    <p><strong>Calories: </strong>@Model.Calories</p>
+    <p><strong>Tastiness: </strong>@Model.Tastiness</p>
+</div>
+<div class="row w-50 mx-auto">
+    <a href="/delete/@Model.Id" class="btn btn-danger col-2">Delete</a><span class="col-8"></span><a href="/edit/@Model.Id" class="btn btn-primary col-2">Edit</a>
+</div>

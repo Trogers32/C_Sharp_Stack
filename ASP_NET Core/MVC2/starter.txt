@@ -31,8 +31,7 @@ public void ConfigureServices(IServiceCollection services)
 {
     services.AddSession();    // add this line
     services.AddMvc();
-    string mySqlConnection = "server=localhost;userid=root;password=root;port=3306;database=mydb;SslMode=None";
-    services.AddDbContext<MyContext>(options => options.UseMySql(mySqlConnection));
+    services.AddDbContext<MyContext>(options => options.UseMySql(Configuration["DBInfo:ConnectionString"]));
 }
 // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
 public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -52,6 +51,22 @@ dotnet watch run
 
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations; ////allows model validation
+
+
+----------------------------------------------------------------------------
+---------	ADD this to appsettings.json -------------
+----------------------------------------------------------------------------
+    "DBInfo":
+    {
+        "Name": "MySQLconnect",
+        "ConnectionString": "server=localhost;userid=root;password=root;port=3306;database=mydb;SslMode=None"
+    }
+
+
+
+
+
+
 
 ----------------------------------------------------------------------------
 ----------------Create a file called YourContext.cs ----------------------

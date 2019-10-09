@@ -1,17 +1,143 @@
-dotnet new console -o {{Project name}}
-dotnet build
-dotnet run
-dotnet /path/to/YourProject.dll
+MVC Project Start
+----------------------------------------------------------------------------
+dotnet new mvc --no-https -o projectName
+#In terminal after navigating to your project directory, run the following command
+dotnet add package Pomelo.EntityFrameworkCore.MySql -v 2.2.0    /////adds entity
 
-using System;
+dotnet add package MySql.Data -v 8.0.16 ////adds ability to use sql db		DONT USE?
+
+----------------------------------------------------------------------------
+Remove the following lines from your Startup.cs file
+----------------------------------------------------------------------------
+services.Configure<CookiePolicyOptions>(options =>
+{
+	// This lambda determines whether user consent for non-essential cookies is needed for a given request.
+	options.CheckConsentNeeded = context => true;
+	options.MinimumSameSitePolicy = SameSiteMode.None;
+});
+app.UseHttpsRedirection();
+app.UseCookiePolicy();
+
+----------------------------------------------------------------------------
+--------Remove the following line from your _Layout.cs file---------
+----------------------------------------------------------------------------
+<partial name="_CookieConsentPartial"></partial>   
+
+----------------------------------------------------------------------------
+---------	ADD this to startup.cs in the configure method	-------------
+----------------------------------------------------------------------------
+using Microsoft.EntityFrameworkCore; 				//////////entity import
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddSession();    // add this line
+    services.AddMvc();
+    services.AddDbContext<MyContext>(options => options.UseMySql(Configuration["DBInfo:ConnectionString"]));
+}
+// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+{
+    // other configurations
+    app.UseSession();    // add this line
+    app.UseMvc();        // make sure UseMvc comes last!!
+}
+
+----------------------------------------------------------------------------
+----------	ADD to controller	-------------------
+----------------------------------------------------------------------------
+using Microsoft.AspNetCore.Http; ///////////////////////added for session
+
+dotnet watch run
+
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations; ////allows model validation
+
+
+----------------------------------------------------------------------------
+---------	ADD this to appsettings.json -------------
+----------------------------------------------------------------------------
+    "DBInfo":
+    {
+        "Name": "MySQLconnect",
+        "ConnectionString": "server=localhost;userid=root;password=root;port=3306;database=mydb;SslMode=None"
+    }
+
+dotnet ef migrations add YourMigrationName
+dotnet ef database update
+
+----------------------------------------------------------------------------
+----------------Create a file called Context.cs ----------------------
+----------------------------------------------------------------------------
+using Microsoft.EntityFrameworkCore; //////////entity import
+namespace YourNamespace.Models
+{
+    public class MyContext : DbContext
+    {
+        // base() calls the parent class' constructor passing the "options" parameter along
+        public MyContext(DbContextOptions options) : base(options) { }
+        // "users" table is represented by this DbSet "Users"
+        public DbSet<Good> Goods {get;set;}
+    }
+}
 
 
 
-dotnet restore
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+--------------session uses---------------
+// *Inside controller methods*
+// To store a string in session we use ".SetString"
+// The first string passed is the key and the second is the value we want to retrieve later
+HttpContext.Session.SetString("UserName", "Samantha");
+// To retrieve a string from session we use ".GetString"
+string LocalVariable = HttpContext.Session.GetString("UserName");
+ 
+// To store an int in session we use ".SetInt32"copy
+HttpContext.Session.SetInt32("UserAge", 28);
+// To retrieve an int from session we use ".GetInt32"
+int IntVariable = HttpContext.Session.GetInt32("UserAge");
+HttpContext.Session.Clear();
 
-ProjName.csproj: the file that references every dependency for our project. 
-Any time we make add or remove packages, we must run the dotnet restore command, 
-which initiates a script that reads the .csproj file and triggers NuGet to download 
-the appropriate packages. 
-(Upon initial creation of a project, this script is automatically run.)
+// in your Controller
+ViewBag.Count = HttpContext.Session.GetInt32("count");
+<!-- in your View -->
+<h2>You have clicked the button @ViewBag.Count</h2>
+
+----------------------------------------------------------------------------
+-----------------modifying session to use objects--------------------
+----------------------------------------------------------------------------
+using Newtonsoft.Json;
+// Somewhere in your namespace, outside other classes
+public static class SessionExtensions
+{
+    // We can call ".SetObjectAsJson" just like our other session set methods, by passing a key and a value
+    public static void SetObjectAsJson(this ISession session, string key, object value)
+    {
+        // This helper function simply serializes theobject to JSON and stores it as a string in session
+        session.SetString(key, JsonConvert.SerializeObject(value));
+    }
+       
+    // generic type T is a stand-in indicating that we need to specify the type on retrieval
+    public static T GetObjectFromJson<T>(this ISession session, string key)
+    {
+        string value = session.GetString(key);
+        // Upon retrieval the object is deserialized based on the type we specified
+        return value == null ? default(T) : JsonConvert.DeserializeObject<T>(value);
+    }
+}
+// *Inside a controller method*
+List<object> NewList = new List<object>();
+ 
+HttpContext.Session.SetObjectAsJson("TheList", NewList);
+ 
+// Notice that we specify the type ( List ) on retrieval
+List<object> Retrieve = HttpContext.Session.GetObjectFromJson<List<object>>("TheList");
