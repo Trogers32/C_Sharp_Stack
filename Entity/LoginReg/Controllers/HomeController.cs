@@ -60,11 +60,20 @@ namespace LoginReg.Controllers
                 var result = hasher.VerifyHashedPassword(logger, logger.Password, Password);
                 if(result != 0){
                     HttpContext.Session.SetString("Email", Email);
-                    return RedirectToAction("Success", logger);
+                    return RedirectToAction("Success");
                 }
             }
             ViewBag.fail = "Incorrect email or password.";
             return View("Index");
+        }
+        /////////////////////////////////////////////////////////////////////////////////
+        /////////////////////Logout/////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////
+        [HttpGet("logout")]
+        public IActionResult Logout()
+        {
+            HttpContext.Session.SetString("Email", "");
+            return RedirectToAction("Index");
         }
         public IActionResult Index()
         {
@@ -72,10 +81,14 @@ namespace LoginReg.Controllers
         }
         public IActionResult Success()
         {
+            if(HttpContext.Session.GetString("Email") == ""){
+                ViewBag.fail = "Incorrect email or password.";
+                return View("Index");
+            }
             string email = HttpContext.Session.GetString("Email");
             User logger = dbContext.Users.FirstOrDefault(User => User.Email == email);
             ViewBag.user = logger;
-			return View();
+			return View("Success");
         }
 
         public IActionResult Privacy()
