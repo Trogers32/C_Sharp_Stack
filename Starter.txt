@@ -1,3 +1,9 @@
+RESUME Link
+Make AWS IP static
+Use route 53 -- google domain routing
+
+
+
 MVC Project Start
 ----------------------------------------------------------------------------
 dotnet new mvc --no-https -o projectName
@@ -45,6 +51,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 ----------	ADD to controller	-------------------
 ----------------------------------------------------------------------------
 using Microsoft.AspNetCore.Http; ///////////////////////added for session
+using Microsoft.AspNetCore.Identity; ///////////password hashing
 
 dotnet watch run
 
