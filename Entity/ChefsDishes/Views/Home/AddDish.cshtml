@@ -1,0 +1,43 @@
+<div class="mx-auto w-50">
+<h2 class="text-center w-100">Add a Dish!</h2>
+<a href="/dishes">Home</a>
+</div>
+
+@model Dish
+<form asp-action="CreateDish" asp-controller="Home" method="post" class="mx-auto w-50">
+    <div class="row">
+        <label asp-for="Name" class="col">Dish Name: </label>
+        <input asp-for="Name" class="col">
+    </div>
+    <div class="row">
+        <label class="col">Chef:</label>
+        <select asp-for="ChefId" class="col">
+            @{
+                foreach(var i in ViewBag.c){
+                    <option value="@i.ChefId">@i.FName @i.LName</option>
+                }
+            }
+        </select>
+    </div>
+    <div class="row">
+        <label asp-for="Tastiness" class="col">Tastiness: </label>
+        <select asp-for="Tastiness" class="col">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+    </div>
+    <div class="row">
+        <label asp-for="Calories" class="col">Calories: </label>
+        <input asp-for="Calories" class="col">
+    </div>
+    <div class="row">
+        <label asp-for="Description" class="col">Description: </label>
+        <textarea asp-for="Description" class="w-50"></textarea>
+    </div>
+    <input value="Add Dish" type="submit">    
+</form>
+
+<div asp-validation-summary="All" class="mx-auto w-50 text-danger"></div>

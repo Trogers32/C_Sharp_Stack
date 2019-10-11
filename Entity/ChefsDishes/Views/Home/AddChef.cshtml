@@ -1,0 +1,24 @@
+<div class="mx-auto w-50">
+<h2 class="text-center w-100">Add a Chef!</h2>
+<a href="/">Home</a>
+</div>
+
+@model Chef
+<form asp-action="CreateChef" asp-controller="Home" method="post" class="mx-auto w-50">
+    <div class="row">
+        <label class="col" asp-for="FName">First Name: </label>
+        <input class="col" asp-for="FName">
+    </div>
+    <div class="row">
+        <label class="col" asp-for="LName">Last Name: </label>
+        <input class="col" asp-for="LName">
+    </div>
+    <div class="row">
+        <label class="col" asp-for="Age">Birthday: </label>
+        <input class="col" type="date" asp-for="Age">
+    </div>
+    <input class="float-right" value="Add Chef" type="submit">   
+</form>
+<div asp-validation-summary="All" class="mx-auto w-50 text-danger">
+    
+</div>

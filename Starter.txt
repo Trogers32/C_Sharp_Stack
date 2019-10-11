@@ -32,7 +32,13 @@ app.UseCookiePolicy();
 ----------------------------------------------------------------------------
 ---------	ADD this to startup.cs in the configure method	-------------
 ----------------------------------------------------------------------------
+using ProjectName.Models;		
 using Microsoft.EntityFrameworkCore; 				//////////entity import
+     public Startup(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
+     public IConfiguration Configuration { get; }
 public void ConfigureServices(IServiceCollection services)
 {
     services.AddSession();    // add this line

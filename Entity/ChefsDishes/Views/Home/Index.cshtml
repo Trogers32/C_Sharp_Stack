@@ -1,8 +1,37 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="mx-auto w-75">
+    <div class="row">
+        <div class="col-8">
+            <h2>Chefs | <a href="/dishes">Dishes</a></h2>
+        </div>
+        <div class="col text-right">
+            <a href="/new">Add a chef</a>
+        </div>
+    </div>
+    <div class="w-75 border-bottom border-dark">
+        <h4>Check out our roster of Chefs!</h4>
+    </div>
+    <table class="table table-striped mt-4">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Age</th>
+                <th scope="col"># of dishes</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach(var i in ViewBag.c){
+                    int x = DateTime.Today.Year - i.Age.Year;
+                    <tr>
+                        <th scope="row">@i.FName</th>
+                        <td>@x</td>
+                        <td>@i.dishes</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
 </div>
