@@ -1,0 +1,25 @@
+
+<div class="w-75 mx-auto">
+    <h4 class="text-center">@ViewBag.Product.Name</h4>
+</div>
+<div class="w-75 mx-auto row">
+    <div class="col">
+        <h5>Categories:</h5>
+        @foreach(var x in ViewBag.Categories){
+            <p>@x.Name</p>
+        }
+    </div>
+    <div class="col">
+        <p>Add Category:</p>
+        @model Associations
+        <form asp-action="AddCategoryToProduct" asp-controller="Home" method="post">
+            <select asp-for="CategoryId">
+                @foreach(var i in ViewBag.NotCategories){
+                    <option value="@i.CategoryId">@i.Name</option>
+                }
+            </select>
+            <input asp-for="ProductId" value="@ViewBag.Product.ProductId" hidden>
+            <input class="float-right" value="Add Product" type="submit">   
+        </form>
+    </div>
+</div>
