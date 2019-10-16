@@ -42,8 +42,8 @@ using Microsoft.EntityFrameworkCore; 				//////////entity import
 public void ConfigureServices(IServiceCollection services)
 {
     services.AddSession();    // add this line
-    services.AddMvc();
     services.AddDbContext<MyContext>(options => options.UseMySql(Configuration["DBInfo:ConnectionString"]));
+    services.AddMvc();
 }
 // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
 public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -58,6 +58,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 ----------------------------------------------------------------------------
 using Microsoft.AspNetCore.Http; ///////////////////////added for session
 using Microsoft.AspNetCore.Identity; ///////////password hashing
+using Microsoft.EntityFrameworkCore; 				//////////entity import
 
 dotnet watch run
 
@@ -68,7 +69,6 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-
 
 
 ----------------------------------------------------------------------------
